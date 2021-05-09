@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F92C72E5-A595-EEEA-B9A6-711ADDF310F0}</ProjectGuid>
+    <ProjectGuid>{20CC7308-E9EF-2A01-1BCA-34C5C9090773}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Timeline</AssemblyName>
@@ -121,8 +121,8 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Events\MarkerList.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Playables\TimeControlPlayable.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Utilities\TimelineUndo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Evaluation\InfiniteRuntimeClip.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Playables\ITimeControl.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Evaluation\InfiniteRuntimeClip.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Playables\ParticleControlPlayable.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Utilities\Extrapolation.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Utilities\NotificationUtilities.cs" />
@@ -708,11 +708,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{0C3E38E8-5829-4449-BA17-90E311F2F3FC}</Project>
+      <Project>{DA28C1D8-8ACE-BB3E-7C5F-0EDDF20560AE}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{F06BBD88-1D03-C79A-75F6-E8996ECC4492}</Project>
+      <Project>{5114E9B7-3B60-A0B0-C76F-DD7A2DA46C7B}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

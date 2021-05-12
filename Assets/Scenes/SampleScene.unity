@@ -433,7 +433,7 @@ GameObject:
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!81 &963194226
 AudioListener:
@@ -493,13 +493,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.02186742, y: 0.97771364, z: -0.16140555, w: 0.13246185}
-  m_LocalPosition: {x: -1.7481366, y: 2.5, z: 6.3331614}
+  m_LocalRotation: {x: 0.3590549, y: -0.01890873, z: -0.020758256, w: 0.93289405}
+  m_LocalPosition: {x: -6.07, y: 15.25, z: -12.92}
   m_LocalScale: {x: 0.9184088, y: 0.9184088, z: 1.2145542}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 80.611, y: 182.305, z: -15.015}
+  m_LocalEulerAnglesHint: {x: 42, y: -3.872, z: -4.036}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,7 +726,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470083410}
-  m_LocalRotation: {x: 0.019460773, y: 0.98048085, z: -0.14364183, w: 0.13283677}
+  m_LocalRotation: {x: 0.019460771, y: 0.98048085, z: -0.14364183, w: 0.13283676}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -945,7 +945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1849441466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,7 +953,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849441465}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 319d2fe34a804e245819465c9505ea59, type: 3}
   m_Name: 
@@ -1282,6 +1282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 963194228}
+  Koala: {fileID: 1494182266146090617}
   horizontalMove: 0
   verticalMove: 0
   speed: 1
@@ -1386,6 +1387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
+  Koala: {fileID: 0}
   horizontalMove: 0
   verticalMove: 0
   speed: 0

@@ -3,7 +3,8 @@ guid: d0596eb218116b84093eb1f6e77d571b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Koala: {fileID: 919132149155446097, guid: 91107ac5794962a4b8656f1732a80e75, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

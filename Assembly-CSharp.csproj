@@ -664,6 +664,26 @@
       <Project>{5114E9B7-3B60-A0B0-C76F-DD7A2DA46C7B}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{8F287CF5-1DCD-FDFE-117B-D09D751695AB}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{05C58C2D-0A49-A191-0687-0770C6FEEBA7}</Project>
+      <Name>Cinemachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.Editor.csproj">
+      <Project>{AF4CF9CA-A6FA-FB67-75DF-9C070C9FCD14}</Project>
+      <Name>Unity.Recorder.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.csproj">
+      <Project>{6E393E03-B6C5-AF5C-38A6-B85FE170568D}</Project>
+      <Name>Unity.Recorder</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.Base.csproj">
+      <Project>{B5C560B1-05F6-541F-648E-F6FBD9C88E65}</Project>
+      <Name>Unity.Recorder.Base</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -134,6 +134,6 @@ public class SimpleGrabSystem : MonoBehaviour
         item.Rb.isKinematic = false;
 
         // Add force to throw item a little bit
-        item.Rb.AddForce(item.transform.forward * 2, ForceMode.VelocityChange);
+        item.Rb.AddForce(item.transform.forward * 200);
     }
 }

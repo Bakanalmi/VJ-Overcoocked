@@ -3,19 +3,26 @@ using UnityEngine;
 /// <summary>
 /// Attach this class to make object pickable.
 /// </summary>
-[RequireComponent(typeof(Rigidbody))]
 public class SpawnItem : MonoBehaviour
 {
-    // Reference to the rigidbody
-    private Rigidbody rb;
-    public Rigidbody Rb => rb;
+    // Reference to the food prefab to be generated
+    public GameObject foodPrefab;
+    // Reference the position to be created
+    public Transform theDest;
 
     /// <summary>
     /// Method called on initialization.
     /// </summary>
-    private void Awake()
+    private void Update()
     {
-        // Get reference to the rigidbody
-        rb = GetComponent<Rigidbody>();
+        // Get the number of childs
+        int numChild = transform.childCount;
+        // Generates a new child if numChild == 0
+        if (numChild == 0)
+        {
+            GameObject food = Instantiate(foodPrefab, theDest.position, Quaternion.identity, theDest);
+            food.GetComponent<Rigidbody>().isKinematic = true;
+            food.transform.localPosition = new Vector3(-0.25f, 0f, 0f);
+        }
     }
 }

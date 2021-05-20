@@ -13,14 +13,16 @@ public class SimpleGrabSystem : MonoBehaviour
     [SerializeField]
     private Transform slot;
 
+    [SerializeField]
+    private Transform cutslot;
+
     // Reference to the currently held item.
     private PickableItem pickedItem;
 
     private Collider hit = null;
-    private Collider Food = null;
 
     private bool FoodAvailable = false;
-    private bool GetFood = false;
+    private bool CutFoodAvailable = false;
 
     /// <summary>
     /// Method called very frame.
@@ -51,10 +53,6 @@ public class SimpleGrabSystem : MonoBehaviour
                         PickItem(pickable);
                     }
                 }
-                else if (GetFood)
-                {
-
-                }
             }
         }
     }
@@ -78,7 +76,6 @@ public class SimpleGrabSystem : MonoBehaviour
 
         // Reset position and rotation
         item.transform.localPosition = Vector3.zero;
-        item.transform.localEulerAngles = Vector3.zero;
 
     }
 
@@ -91,14 +88,31 @@ public class SimpleGrabSystem : MonoBehaviour
         // Remove reference
         pickedItem = null;
 
-        // Remove parent
-        item.transform.SetParent(null);
+        if (CutFoodAvailable)
+        {
+            // Disable rigidbody and reset velocities
+            item.Rb.isKinematic = true;
+            item.Rb.velocity = Vector3.zero;
+            item.Rb.angularVelocity = Vector3.zero;
 
-        // Enable rigidbody
-        item.Rb.isKinematic = false;
+            // Set Slot as a parent
+            item.transform.SetParent(cutslot);
 
-        // Add force to throw item a little bit
-        item.Rb.AddForce(item.transform.forward * 200);
+            // Reset position and rotation
+            item.transform.localPosition = new Vector3(0f,0f,0.07f);
+        }
+        
+        else
+        {
+            // Remove parent
+            item.transform.SetParent(null);
+
+            // Enable rigidbody
+            item.Rb.isKinematic = false;
+
+            // Add force to throw item a little bit
+            item.Rb.AddForce(item.transform.forward * 200);
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -109,10 +123,10 @@ public class SimpleGrabSystem : MonoBehaviour
             hit = null;
         }
 
-        else if (other.gameObject.CompareTag("Spawn"))
+        else if (other.gameObject.CompareTag("cuttingTable"))
         {
-            GetFood = false;
-            Food = null;
+            CutFoodAvailable = false;
+            hit = null;
         }
     }
 
@@ -124,10 +138,13 @@ public class SimpleGrabSystem : MonoBehaviour
             hit = other;
         }
 
-        else if (other.gameObject.CompareTag("Spawn"))
+        else if (other.gameObject.CompareTag("cuttingTable"))
         {
-            GetFood = true;
-            Food = other;
+            if (other.transform.childCount == 0) 
+            {
+                CutFoodAvailable = true;
+                hit = other;
+            }
         }
     }
 }

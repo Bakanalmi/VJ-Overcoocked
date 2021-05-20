@@ -60,6 +60,7 @@
     <Compile Include="Assets\Script\Spawn_Food.cs" />
     <Compile Include="Assets\Script\SimpleGrabSystem.cs" />
     <Compile Include="Assets\Script\PickableItem.cs" />
+    <Compile Include="Assets\Script\SpawnItem.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\FREE Food Pack\Shaders\Food.shader" />

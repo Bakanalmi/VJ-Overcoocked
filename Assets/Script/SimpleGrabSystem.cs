@@ -16,6 +16,12 @@ public class SimpleGrabSystem : MonoBehaviour
     // Reference to the currently held item.
     private PickableItem pickedItem;
 
+    private Collider hit = null;
+    private Collider Food = null;
+
+    private bool FoodAvailable = false;
+    private bool GetFood = false;
+
     /// <summary>
     /// Method called very frame.
     /// </summary>
@@ -32,64 +38,22 @@ public class SimpleGrabSystem : MonoBehaviour
             }
             else
             {
-                // If no, try to pick item in front of the player
-                // Create ray from center of the screen
-                for (int i = 1; i < 9; ++i)
+                // If player can pick an item in front of him
+                if (FoodAvailable)
                 {
-                    var ray = new Ray();
-                    ray.origin = character.position;
-                    Vector3 direction = new Vector3().normalized;
-                    if (i == 1)
-                    {
-                        direction = Vector3.forward;
-                    }
-                    else if ( i == 2)
-                    {
-                        direction = new Vector3(0f,1f,1f).normalized;
-                    }
-                    else if (i == 3)
-                    {
-                        direction = new Vector3(0f,-1f,1f).normalized;
-                    }
-                    else if (i == 4)
-                    {
-                        direction = new Vector3(1f,0f,1f).normalized;
-                    }
-                    else if (i == 5)
-                    {
-                        direction = new Vector3(-1f,0f,1f).normalized;
-                    }
-                    else if (i == 6)
-                    {
-                        direction = new Vector3(1f, 1f, 1f).normalized;
-                    }
-                    else if (i == 7)
-                    {
-                        direction = new Vector3(1f, -1f, 1f).normalized;
-                    }
-                    else if (i == 8)
-                    {
-                        direction = new Vector3(-1f, 1f, 1f).normalized;
-                    }
-                    else
-                    {
-                        direction = new Vector3(-1f, -1f, 1f).normalized;
-                    }
-                    ray.direction = character.TransformDirection(direction);
-                    RaycastHit hit;
-                    // Shot ray to find object to pick
-                    if (Physics.Raycast(ray, out hit, 1.5f))
-                    {
-                        // Check if object is pickable
-                        var pickable = hit.transform.GetComponent<PickableItem>();
+                    // Check if object is pickable
+                    var pickable = hit.transform.GetComponent<PickableItem>();
 
-                        // If object has PickableItem class
-                        if (pickable)
-                        {
-                            // Pick it
-                            PickItem(pickable);
-                        }
+                    // If object has PickableItem class
+                    if (pickable)
+                    {
+                        // Pick it
+                        PickItem(pickable);
                     }
+                }
+                else if (GetFood)
+                {
+
                 }
             }
         }
@@ -135,5 +99,35 @@ public class SimpleGrabSystem : MonoBehaviour
 
         // Add force to throw item a little bit
         item.Rb.AddForce(item.transform.forward * 200);
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Food"))
+        {
+            FoodAvailable = false;
+            hit = null;
+        }
+
+        else if (other.gameObject.CompareTag("Spawn"))
+        {
+            GetFood = false;
+            Food = null;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Food"))
+        {
+            FoodAvailable = true;
+            hit = other;
+        }
+
+        else if (other.gameObject.CompareTag("Spawn"))
+        {
+            GetFood = true;
+            Food = other;
+        }
     }
 }

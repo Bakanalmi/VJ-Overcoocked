@@ -87,17 +87,7 @@ public class SimpleGrabSystem : MonoBehaviour
 
         if (CutFoodAvailable)
         {
-            // Disable rigidbody and reset velocities
-            item.Rb.isKinematic = true;
-            item.Rb.velocity = Vector3.zero;
-            item.Rb.angularVelocity = Vector3.zero;
-
-            // Set Slot as a parent
-
-            item.transform.SetParent(hit.transform);
-
-            // Reset position and rotation
-            item.transform.localPosition = new Vector3(0f,0f,0f);
+            PlaceItem(item);
         }
         
         else
@@ -111,6 +101,25 @@ public class SimpleGrabSystem : MonoBehaviour
             // Add force to throw item a little bit
             item.Rb.AddForce(item.transform.forward * 200);
         }
+    }
+
+    /// <summary>
+    /// Method for placing the item.
+    /// </summary>
+    /// <param name="item">Item.</param>
+    private void PlaceItem(PickableItem item)
+    {
+        // Disable rigidbody and reset velocities
+        item.Rb.isKinematic = true;
+        item.Rb.velocity = Vector3.zero;
+        item.Rb.angularVelocity = Vector3.zero;
+
+        // Set Slot as a parent
+
+        item.transform.SetParent(hit.transform);
+
+        // Reset position and rotation
+        item.transform.localPosition = Vector3.zero;
     }
 
     void OnTriggerExit(Collider other)

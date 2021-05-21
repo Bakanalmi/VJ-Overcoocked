@@ -231,6 +231,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5928551031695289340, guid: e2a576cf6721c0541b1cee56e0e9c88d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8918312698053130250, guid: e2a576cf6721c0541b1cee56e0e9c88d, type: 3}
       propertyPath: m_Name
       value: taulaTalla (1)

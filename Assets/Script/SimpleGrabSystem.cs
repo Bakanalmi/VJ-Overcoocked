@@ -13,9 +13,6 @@ public class SimpleGrabSystem : MonoBehaviour
     [SerializeField]
     private Transform slot;
 
-    [SerializeField]
-    private Transform cutslot;
-
     // Reference to the currently held item.
     private PickableItem pickedItem;
 
@@ -96,10 +93,11 @@ public class SimpleGrabSystem : MonoBehaviour
             item.Rb.angularVelocity = Vector3.zero;
 
             // Set Slot as a parent
-            item.transform.SetParent(cutslot);
+
+            item.transform.SetParent(hit.transform);
 
             // Reset position and rotation
-            item.transform.localPosition = new Vector3(0f,0f,0.07f);
+            item.transform.localPosition = new Vector3(0f,0f,0f);
         }
         
         else

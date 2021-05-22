@@ -267,7 +267,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 5467667042536627779}
   slot: {fileID: 6059232945762911715}
-  cutslot: {fileID: 0}
 --- !u!54 &4659781510330696946
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -282,7 +281,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 122
   m_CollisionDetection: 1
 --- !u!65 &4659781510330696947
 BoxCollider:

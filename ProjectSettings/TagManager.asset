@@ -8,6 +8,14 @@ TagManager:
   - Spawn
   - FoodItem
   - cuttingTable
+  - Paella
+  - Olla
+  - Table
+  - VegetableC
+  - Lid
+  - Open
+  - Close
+  - Cooker
   layers:
   - Default
   - TransparentFX

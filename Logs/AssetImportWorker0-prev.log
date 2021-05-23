@@ -1,0 +1,202 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.3f1 (76626098c1c4) revision 7758432'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.985; Version 2009; 64bit' Language: 'ca' Physical Memory: 32615 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/marc0/Desktop/VJ-Overcooked
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+65111
+Successfully changed project path to: C:/Users/marc0/Desktop/VJ-Overcooked
+C:/Users/marc0/Desktop/VJ-Overcooked
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 29.86 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.3f1 (76626098c1c4)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/marc0/Desktop/VJ-Overcooked/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics 630 (ID=0x9bc5)
+    Vendor:   
+    VRAM:     16307 MB
+    Driver:   27.20.100.8681
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56388
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001556 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 31.99 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.859 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001233 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.639 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1121 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.1 MB.
+System memory in use after: 59.1 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1566.
+Total: 1.265000 ms (FindLiveObjects: 0.121700 ms CreateObjectMapping: 0.033500 ms MarkObjects: 1.052900 ms  DeleteObjects: 0.056100 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefabs/Food/Condiments/Carrot_Plated.prefab
+  artifactKey: Guid(e140a5b53ebbcd843b7a2e9f64e162c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Food/Condiments/Carrot_Plated.prefab using Guid(e140a5b53ebbcd843b7a2e9f64e162c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daaecfb5777cf2eb9182cf8addfe8dd2') in 0.034871 seconds
+  Import took 0.036458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.916663 seconds.
+  path: Assets/Player/source/Overcooked/Food/Carrot_Whole-sharedassets66.assets-30.obj
+  artifactKey: Guid(1942106a840043d4bb7345a3ee5f6ef4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/source/Overcooked/Food/Carrot_Whole-sharedassets66.assets-30.obj using Guid(1942106a840043d4bb7345a3ee5f6ef4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cfb248213227eec998a3961a8c90fb7') in 0.095690 seconds
+  Import took 0.097495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Player/source/Overcooked/Food/Carrot_Cooked_Plated-sharedassets0.assets-377.obj
+  artifactKey: Guid(f9ea846e603f55540a6c869a72c875fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/source/Overcooked/Food/Carrot_Cooked_Plated-sharedassets0.assets-377.obj using Guid(f9ea846e603f55540a6c869a72c875fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79b564b241d5f675e5aff702df9f0253') in 0.035308 seconds
+  Import took 0.037110 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.468778 seconds.
+  path: Assets/Prefabs/Food/Condiments/Carrot_Plated.prefab
+  artifactKey: Guid(e140a5b53ebbcd843b7a2e9f64e162c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Food/Condiments/Carrot_Plated.prefab using Guid(e140a5b53ebbcd843b7a2e9f64e162c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25e51c06159803b99f92601290676d56') in 0.013793 seconds
+  Import took 0.015930 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.132731 seconds.
+  path: Assets/Prefabs/Food/Condiments/Carrot_Cooked.prefab
+  artifactKey: Guid(772ed23ba93138f4f89db53e60924111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Food/Condiments/Carrot_Cooked.prefab using Guid(772ed23ba93138f4f89db53e60924111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8639d4c4c6b110ef52e70266a8b52a92') in 0.013352 seconds
+  Import took 0.015236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016732 seconds.
+  path: Assets/Prefabs/Food/Condiments/Carrot_Cooked.prefab
+  artifactKey: Guid(772ed23ba93138f4f89db53e60924111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Food/Condiments/Carrot_Cooked.prefab using Guid(772ed23ba93138f4f89db53e60924111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8639d4c4c6b110ef52e70266a8b52a92') in 0.025352 seconds
+  Import took 0.027155 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 85.951738 seconds.
+  path: Assets/Prefabs/Scene/Objects
+  artifactKey: Guid(f05584bb357dde84e83980aaa0dfa112) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Scene/Objects using Guid(f05584bb357dde84e83980aaa0dfa112) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a51808496c3087b5e3bb9214734729f5') in 0.005989 seconds
+  Import took 0.008345 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001336 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.618 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1116 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.4 MB.
+System memory in use after: 62.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1612.
+Total: 1.244900 ms (FindLiveObjects: 0.107300 ms CreateObjectMapping: 0.039000 ms MarkObjects: 1.059000 ms  DeleteObjects: 0.038800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 296.194084 seconds.
+  path: Assets/Player/source/Overcooked
+  artifactKey: Guid(ab516b93170d4054e9f857cf252fb15d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/source/Overcooked using Guid(ab516b93170d4054e9f857cf252fb15d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64fcc51967d1ec884e6a1333b3a53a97') in 0.009076 seconds
+  Import took 0.010932 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.556677 seconds.
+  path: Assets/Player/source/Overcooked/Objects
+  artifactKey: Guid(a454667ff1aa1994faca57a99a9f6a44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/source/Overcooked/Objects using Guid(a454667ff1aa1994faca57a99a9f6a44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9463e989967294bd30d381b2c7910e65') in 0.002445 seconds
+  Import took 0.004145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 438.593957 seconds.
+  path: Assets/Player/textures/Overcooked/Materials/Lettuce_whole.mat
+  artifactKey: Guid(e46e06acd6a082b49aadb3c5416750fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/textures/Overcooked/Materials/Lettuce_whole.mat using Guid(e46e06acd6a082b49aadb3c5416750fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bf1462b36fc3802add01608cd2351a5') in 0.068357 seconds
+  Import took 0.070840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.545366 seconds.
+  path: Assets/Player/textures/Overcooked/Materials/Objects/Counter_top.mat
+  artifactKey: Guid(e08991a79bfe251409a489a3c2a22748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/textures/Overcooked/Materials/Objects/Counter_top.mat using Guid(e08991a79bfe251409a489a3c2a22748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b80347a415a3ce95418dc125fa68244') in 0.023947 seconds
+  Import took 0.025849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2140.335338 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd19df83e48a9aba12f334235e1aec5c') in 0.009039 seconds
+  Import took 0.011650 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 65.406595 seconds.
+  path: Assets/Player/textures/Overcooked/Materials/Objects/Counter_top.mat
+  artifactKey: Guid(e08991a79bfe251409a489a3c2a22748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/textures/Overcooked/Materials/Objects/Counter_top.mat using Guid(e08991a79bfe251409a489a3c2a22748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a38e0f2e71159049f96e6446729182e') in 0.015064 seconds
+  Import took 0.018617 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -56,7 +56,12 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Move_Koala.cs" />
+    <Compile Include="Assets\Script\MoveKoala.cs" />
+    <Compile Include="Assets\Script\SimpleGrabSystem.cs" />
+    <Compile Include="Assets\Script\Spawn_Food.cs" />
+    <Compile Include="Assets\Script\PickableItem.cs" />
+    <Compile Include="Assets\Script\SpawnItem.cs" />
+    <Compile Include="Assets\Script\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -271,12 +276,6 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Recorder.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -636,18 +635,6 @@
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{5114E9B7-3B60-A0B0-C76F-DD7A2DA46C7B}</Project>
       <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Cinemachine.csproj">
-      <Project>{05C58C2D-0A49-A191-0687-0770C6FEEBA7}</Project>
-      <Name>Cinemachine</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Recorder.csproj">
-      <Project>{6E393E03-B6C5-AF5C-38A6-B85FE170568D}</Project>
-      <Name>Unity.Recorder</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Recorder.Base.csproj">
-      <Project>{B5C560B1-05F6-541F-648E-F6FBD9C88E65}</Project>
-      <Name>Unity.Recorder.Base</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

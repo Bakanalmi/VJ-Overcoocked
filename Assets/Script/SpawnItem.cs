@@ -22,7 +22,7 @@ public class SpawnItem : MonoBehaviour
         {
             GameObject food = Instantiate(foodPrefab, theDest.position, Quaternion.identity, theDest);
             food.GetComponent<Rigidbody>().isKinematic = true;
-            food.transform.localPosition = new Vector3(-0.25f, 0f, 0f);
+            food.transform.localPosition = new Vector3(0f, 0f, 0f);
         }
     }
 }

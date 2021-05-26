@@ -16,6 +16,8 @@ TagManager:
   - Open
   - Close
   - Cooker
+  - Undefined
+  - Vegetable
   layers:
   - Default
   - TransparentFX

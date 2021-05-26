@@ -14,9 +14,9 @@ public class SimpleGrabSystem : MonoBehaviour
     private Transform slot;
 
     // Reference to the currently held item.
-    private PickableItem pickedItem;
+    public PickableItem pickedItem;
 
-    private Collider hit = null;
+    public Collider hit = null;
 
     private bool FoodAvailable = false;
     private bool placeItem = false;
@@ -127,17 +127,15 @@ public class SimpleGrabSystem : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Food"))
+        if (other.gameObject.CompareTag("VegetableC") || other.gameObject.CompareTag("Vegetable"))
         {
             FoodAvailable = false;
-            hit = null;
         }
 
         else if (other.gameObject.CompareTag("cuttingTable"))
         {
             placeItem = false;
             cutAvailable = false;
-            hit = null;
         }
 
         else if (other.gameObject.CompareTag("Paella") || other.gameObject.CompareTag("Olla"))
@@ -145,15 +143,15 @@ public class SimpleGrabSystem : MonoBehaviour
             if (other.transform.childCount == 0)
             {
                 placeItem = false;
-                hit = null;
             }
             cookAvailable = false;
         }
+        hit = null;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("VegetableC"))
+        if (other.gameObject.CompareTag("VegetableC") || other.gameObject.CompareTag("Vegetable"))
         {
             FoodAvailable = true;
             hit = other;

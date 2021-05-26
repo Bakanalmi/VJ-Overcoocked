@@ -63,6 +63,7 @@
     <Compile Include="Assets\Script\PickableItem.cs" />
     <Compile Include="Assets\Script\SpawnItem.cs" />
     <Compile Include="Assets\SwapScene.cs" />
+    <Compile Include="Assets\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

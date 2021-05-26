@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637573190447134551
-    m_Hash: 1506084433
+      ticks: 637575647773577947
+    m_Hash: 2216249773
   m_LockFileStatus:
     m_FilePath: C:/Users/felip/Documents/GitHub/VJ-Overcooked/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637573190447144529
-    m_Hash: 2994449487
+      ticks: 637575647773752744
+    m_Hash: 2933463746
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -292,6 +292,7 @@ m_PackageAssets:
         - 3.0.4
         - 3.0.5
         - 3.0.6
+        - 3.0.7
         compatible:
         - 1.0.2
         - 1.0.6
@@ -317,6 +318,7 @@ m_PackageAssets:
         - 3.0.4
         - 3.0.5
         - 3.0.6
+        - 3.0.7
         verified: 2.0.7
       dependencies:
       - name: com.unity.test-framework
@@ -687,12 +689,12 @@ m_PackageAssets:
         url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
         revision: e6fe8892689398c0d9aba4587e0ba69edc3d82b8
         path: 
-    - packageId: com.unity.textmeshpro@3.0.4
+    - packageId: com.unity.textmeshpro@3.0.6
       testable: 0
       isDirectDependency: 1
-      version: 3.0.4
+      version: 3.0.6
       source: 1
-      resolvedPath: C:\Users\felip\Documents\GitHub\VJ-Overcooked\Library\PackageCache\com.unity.textmeshpro@3.0.4
+      resolvedPath: C:\Users\felip\Documents\GitHub\VJ-Overcooked\Library\PackageCache\com.unity.textmeshpro@3.0.6
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -838,13 +840,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637492944820000000
+      datePublishedTicks: 637547111200000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.textmeshpro.git
-        revision: e2f8dffb26de9a130d5b2140d83891d9a7825330
+        revision: 01e57e3b7de18af9dfe9baaa0a0ff5cc4765c899
         path: 
     - packageId: com.unity.timeline@1.4.6
       testable: 0
@@ -928,6 +930,7 @@ m_PackageAssets:
         - 1.6.0-pre.1
         - 1.6.0-pre.3
         - 1.6.0-pre.4
+        - 1.6.0-pre.5
         compatible:
         - 1.4.6
         - 1.4.7
@@ -947,6 +950,7 @@ m_PackageAssets:
         - 1.6.0-pre.1
         - 1.6.0-pre.3
         - 1.6.0-pre.4
+        - 1.6.0-pre.5
         verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director

@@ -459,8 +459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a404d38332a2c4bacb3a5de09c67d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restartDelay: 2
-  GameHasFinish: 0
 --- !u!4 &724971524
 Transform:
   m_ObjectHideFlags: 0
@@ -590,8 +588,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11b02e2ae5a3206478fca46a42d2cde0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   minutes: 2
   seconds: 0
+=======
+  minutes: 0
+  seconds: 5
+>>>>>>> parent of d468c1b... Gravetat corregida
   timerText: {fileID: 1789286089}
 --- !u!114 &1007308211
 MonoBehaviour:

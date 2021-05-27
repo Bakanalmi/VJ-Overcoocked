@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 1007308212}
   - component: {fileID: 1007308211}
   - component: {fileID: 1007308210}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 1294354312}
   - component: {fileID: 1294354311}
   - component: {fileID: 1294354310}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,6 +844,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1518029096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1518029098}
+  - component: {fileID: 1518029099}
+  - component: {fileID: 1518029097}
+  m_Layer: 0
+  m_Name: BackgroundAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1518029097
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518029096}
+  m_Enabled: 1
+--- !u!4 &1518029098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518029096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.304298, y: 4.5529613, z: -1.034689}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1518029099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518029096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4af4d68d75c41a499d55dbf1a729435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1525178625 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4659781510330696953, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
@@ -884,7 +936,7 @@ GameObject:
   - component: {fileID: 1928296766}
   - component: {fileID: 1928296765}
   - component: {fileID: 1928296764}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background_Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

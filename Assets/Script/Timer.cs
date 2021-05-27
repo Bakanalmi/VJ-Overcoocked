@@ -13,6 +13,8 @@ public class Timer : MonoBehaviour
 
     private int m, s; //Current time values. These variables are modified as time goes by.
 
+    //public Image Roscon_Timer;
+
     
     public TextMeshProUGUI timerText; //Here we will save a reference of the text element of the Canvas.
 
@@ -35,13 +37,15 @@ public class Timer : MonoBehaviour
     }
 
     public void updateTimer()
-    {
+    {   
+
         s--;
         if (s < 0)
         {
             if (m == 0)
             {
                 //TODO: finalizar el juego
+              //  Roscon_Timer.enabled = false;
                 Invoke("stopTimer", 0f) ;
                 FindObjectOfType<GameManager>().GameHasFinish = true;
                 FindObjectOfType<GameManager>().EndGame();
@@ -52,6 +56,8 @@ public class Timer : MonoBehaviour
                 s = 59;
             }
         }
+        float Time_rest = m * 60 + s;
+       // Roscon_Timer.fillAmount -= 1.0f/Time_rest * Time.deltaTime;
         writeOnTimer(m, s);
         Invoke("updateTimer", 1f);
 

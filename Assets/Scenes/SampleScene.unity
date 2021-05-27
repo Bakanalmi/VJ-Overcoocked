@@ -267,6 +267,14 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 4659781510330696951, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659781510330696951, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: m_StepOffset
+      value: 0.18
+      objectReference: {fileID: 0}
     - target: {fileID: 4659781510330696953, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
       propertyPath: m_Name
       value: Koala
@@ -335,7 +343,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.00468
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4659781510330696946, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
 --- !u!1 &705507993
 GameObject:
@@ -740,6 +749,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1525178625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4659781510330696953, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+  m_PrefabInstance: {fileID: 490414006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1525178627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525178625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b79e8f8cbb7ecf4e9c90662d11292be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 963194228}
+  Koala: {fileID: 1525178630}
+  horizontalMove: 0
+  verticalMove: 0
+  gravitity: -9.81
+  turnSmootTime: 0.1
+--- !u!143 &1525178630 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 4659781510330696951, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+  m_PrefabInstance: {fileID: 490414006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1789286088
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +842,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

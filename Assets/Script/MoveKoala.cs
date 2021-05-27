@@ -12,10 +12,14 @@ public class MoveKoala : MonoBehaviour
     public float horizontalMove;
     public float verticalMove;
 
-    private float speed = 2.0f; //se ha hardcodeado, ya que unity lo pone por defecto en 0, y asi nos evitamos el error de speed = 0
+    private float speed = 2.5f; //se ha hardcodeado, ya que unity lo pone por defecto en 0, y asi nos evitamos el error de speed = 0
+    public float gravitity = -9.81f;
 
     public float turnSmootTime = 0.1f;
+    
     float turnSmoothVelocity; //velocidad al girar el personaje
+
+    Vector3 velocity;
 
 
 
@@ -50,6 +54,8 @@ public class MoveKoala : MonoBehaviour
             Koala.Move(moveDir.normalized * speed * Time.deltaTime);
 
         }
+        velocity.y += gravitity * Time.deltaTime;
+        Koala.Move(velocity * Time.deltaTime);
 
 
         //Swithc case de los movimientos en el planol

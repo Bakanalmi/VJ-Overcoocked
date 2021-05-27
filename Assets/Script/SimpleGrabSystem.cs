@@ -190,6 +190,6 @@ public class SimpleGrabSystem : MonoBehaviour
                 else if (cookItem.GetState() == "Cut" && cookAvailable)
                     cookItem.Cook();
             }
-        }
+        }   
     }
 }

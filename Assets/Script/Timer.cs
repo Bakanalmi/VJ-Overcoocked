@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 
+using UnityEngine;
+
+using TMPro;
 public class Timer : MonoBehaviour
 {
 
@@ -14,7 +13,7 @@ public class Timer : MonoBehaviour
     private int m, s; //Current time values. These variables are modified as time goes by.
 
     
-    public Text timerText; //Here we will save a reference of the text element of the Canvas.
+    public TextMeshProUGUI timerText; //Here we will save a reference of the text element of the Canvas.
 
 
     public void Start()
@@ -39,6 +38,7 @@ public class Timer : MonoBehaviour
             if (m == 0)
             {
                 //TODO: finalizar el juego
+               // FindObjectOfType<GameManager>().EndGame();
             }
             else
             {
@@ -55,15 +55,18 @@ public class Timer : MonoBehaviour
     {
         if (s<10) //la variable de los segundos solo tiene un digito
         {
-            timerText.text = m.ToString() + ":0" + s.ToString();
+            timerText.SetText(m.ToString() + ":0" + s.ToString());
         }
 
         else
         {
-            timerText.text = m.ToString() + ":" + s.ToString();
+            timerText.SetText( m.ToString() + ":" + s.ToString());
         }
 
     }
+    
+
+
 
 
 

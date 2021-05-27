@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.UI;
 
 using TMPro;
 public class Timer : MonoBehaviour
@@ -27,6 +28,9 @@ public class Timer : MonoBehaviour
 
     public void stopTimer()
     {
+        m = 0;
+        s = 0;
+        writeOnTimer(m, s);
 
     }
 
@@ -38,7 +42,9 @@ public class Timer : MonoBehaviour
             if (m == 0)
             {
                 //TODO: finalizar el juego
-               // FindObjectOfType<GameManager>().EndGame();
+                Invoke("stopTimer", 0f) ;
+                FindObjectOfType<GameManager>().GameHasFinish = true;
+                FindObjectOfType<GameManager>().EndGame();
             }
             else
             {

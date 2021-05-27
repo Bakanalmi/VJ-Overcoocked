@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 1437353000246775739}
   - component: {fileID: 1437353000246775738}
   - component: {fileID: 1437353000246775737}
+  - component: {fileID: 4583317029156519160}
   m_Layer: 0
   m_Name: Crate_Potatoe
   m_TagString: Untagged
@@ -123,6 +124,22 @@ MonoBehaviour:
   lid: {fileID: 7206140773349047601}
   open: {fileID: 1437353000413682222}
   close: {fileID: 1437353001396130498}
+--- !u!54 &4583317029156519160
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437353000246775736}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1437353000413682221
 GameObject:
   m_ObjectHideFlags: 0

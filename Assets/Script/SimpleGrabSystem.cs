@@ -117,7 +117,6 @@ public class SimpleGrabSystem : MonoBehaviour
         item.Rb.angularVelocity = Vector3.zero;
 
         // Set Slot as a parent
-
         item.transform.SetParent(hit.transform);
 
         // Reset position and rotation
@@ -146,7 +145,6 @@ public class SimpleGrabSystem : MonoBehaviour
             }
             cookAvailable = false;
         }
-        hit = null;
     }
 
     void OnTriggerEnter(Collider other)

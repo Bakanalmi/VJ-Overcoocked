@@ -174,9 +174,9 @@ GameObject:
   - component: {fileID: 4659781510330696950}
   - component: {fileID: 4659781510330696951}
   - component: {fileID: 4659781510330696948}
-  - component: {fileID: 4659781510330696949}
-  - component: {fileID: 4659781510330696946}
   - component: {fileID: 4659781510330696947}
+  - component: {fileID: 4659781510330696949}
+  - component: {fileID: 2572384219868177105}
   m_Layer: 0
   m_Name: Koala
   m_TagString: Player
@@ -220,7 +220,7 @@ MonoBehaviour:
   Koala: {fileID: 4659781510330696951}
   horizontalMove: 0
   verticalMove: 0
-  speed: 2
+  gravitity: -9.81
   turnSmootTime: 0.1
 --- !u!143 &4659781510330696951
 CharacterController:
@@ -251,8 +251,21 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 1, z: 0.5}
+  m_Size: {x: 0.5102141, y: 2, z: 1}
+  m_Center: {x: 0.010468125, y: 1, z: 0.5}
+--- !u!65 &4659781510330696947
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4659781510330696953}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &4659781510330696949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +280,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 5467667042536627779}
   slot: {fileID: 6059232945762911715}
---- !u!54 &4659781510330696946
+  pickedItem: {fileID: 0}
+  hit: {fileID: 0}
+--- !u!54 &2572384219868177105
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -279,23 +294,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 122
-  m_CollisionDetection: 1
---- !u!65 &4659781510330696947
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4659781510330696953}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5891045324469060991
 GameObject:
   m_ObjectHideFlags: 0

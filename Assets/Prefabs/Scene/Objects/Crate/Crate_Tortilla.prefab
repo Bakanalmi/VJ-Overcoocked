@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 8606077635854338946}
   - component: {fileID: 8606077635854338947}
   - component: {fileID: 8606077635854338944}
+  - component: {fileID: -584529746709223202}
   m_Layer: 0
   m_Name: Crate_Tortilla
   m_TagString: Untagged
@@ -265,6 +266,22 @@ MonoBehaviour:
   lid: {fileID: 2102771228479590097}
   open: {fileID: 8606077635685703191}
   close: {fileID: 8606077634722125563}
+--- !u!54 &-584529746709223202
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8606077635854338945}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1242681052455002969
 PrefabInstance:
   m_ObjectHideFlags: 0

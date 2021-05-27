@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &371049282 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5467667042536627779, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+  m_PrefabInstance: {fileID: 490414006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &387003164
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +256,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4659781510330696946, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4659781510330696947, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
       propertyPath: m_Size.y
       value: 0.40667543
@@ -267,6 +276,18 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 4659781510330696950, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 371049282}
+    - target: {fileID: 4659781510330696951, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659781510330696951, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: m_StepOffset
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4659781510330696953, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
       propertyPath: m_Name
       value: Koala
@@ -335,7 +356,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.00468
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4659781510330696946, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
 --- !u!1 &705507993
 GameObject:
@@ -459,6 +481,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a404d38332a2c4bacb3a5de09c67d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartDelay: 2
+  GameHasFinish: 0
 --- !u!4 &724971524
 Transform:
   m_ObjectHideFlags: 0
@@ -588,7 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11b02e2ae5a3206478fca46a42d2cde0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minutes: 0
+  minutes: 5
   seconds: 5
   timerText: {fileID: 1789286089}
 --- !u!114 &1007308211

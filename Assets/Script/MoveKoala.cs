@@ -12,10 +12,18 @@ public class MoveKoala : MonoBehaviour
     public float horizontalMove;
     public float verticalMove;
 
-    private float speed = 2.0f; //se ha hardcodeado, ya que unity lo pone por defecto en 0, y asi nos evitamos el error de speed = 0
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
+    public LayerMask groundMask;
+
+    private float speed = 4.0f; //se ha hardcodeado, ya que unity lo pone por defecto en 0, y asi nos evitamos el error de speed = 0
 
     public float turnSmootTime = 0.1f;
     float turnSmoothVelocity; //velocidad al girar el personaje
+
+    public float gravity = -9.81f;  
+    Vector3 velocity;
+    bool isGrounded;
 
 
 
@@ -28,7 +36,12 @@ public class MoveKoala : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
 
+        }
         horizontalMove = Input.GetAxis("Horizontal");
         verticalMove = Input.GetAxis("Vertical");
 
@@ -48,6 +61,10 @@ public class MoveKoala : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             transform.Translate(moveDir * speed * Time.deltaTime);
             Koala.Move(moveDir.normalized * speed * Time.deltaTime);
+
+            velocity.y += gravity * Time.deltaTime;
+            Koala.Move(velocity * Time.deltaTime);
+
 
         }
 

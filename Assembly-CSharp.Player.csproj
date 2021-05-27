@@ -57,13 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\MoveKoala.cs" />
+    <Compile Include="Assets\Script\Bin.cs" />
     <Compile Include="Assets\Script\SimpleGrabSystem.cs" />
     <Compile Include="Assets\Script\Timer.cs" />
+    <Compile Include="Assets\Script\CookItem.cs" />
+    <Compile Include="Assets\Script\CrateAction.cs" />
     <Compile Include="Assets\Script\Spawn_Food.cs" />
+    <Compile Include="Assets\Script\MainMenu.cs" />
     <Compile Include="Assets\Script\PickableItem.cs" />
     <Compile Include="Assets\Script\SpawnItem.cs" />
-    <Compile Include="Assets\SwapScene.cs" />
-    <Compile Include="Assets\MainMenu.cs" />
+    <Compile Include="Assets\Script\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

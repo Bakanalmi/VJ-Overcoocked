@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 41801a58ebf00e440bcad6a61a36a117, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &371049282 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5467667042536627779, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
-  m_PrefabInstance: {fileID: 490414006}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &387003164
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,10 +251,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4659781510330696946, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4659781510330696947, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
       propertyPath: m_Size.y
       value: 0.40667543
@@ -276,18 +267,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194228}
-    - target: {fileID: 4659781510330696950, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
-      propertyPath: groundCheck
-      value: 
-      objectReference: {fileID: 371049282}
-    - target: {fileID: 4659781510330696951, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
-      propertyPath: m_SlopeLimit
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659781510330696951, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
-      propertyPath: m_StepOffset
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 4659781510330696953, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
       propertyPath: m_Name
       value: Koala
@@ -356,8 +335,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.00468
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4659781510330696946, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
 --- !u!1 &705507993
 GameObject:
@@ -612,8 +590,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11b02e2ae5a3206478fca46a42d2cde0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minutes: 5
-  seconds: 5
+  minutes: 2
+  seconds: 0
   timerText: {fileID: 1789286089}
 --- !u!114 &1007308211
 MonoBehaviour:
@@ -827,7 +805,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.9
+  m_fontSize: 52
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

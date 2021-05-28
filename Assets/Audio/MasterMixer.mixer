@@ -18,6 +18,8 @@ AudioMixerController:
   m_ExposedParameters:
   - guid: 214302c333521ef41a573e3ecc91de5e
     name: volume
+  - guid: c26ad6c3ed952844082a1ec6c40387b7
+    name: Pitch
   m_AudioMixerGroupViews:
   - guids:
     - 7ab6adf37be39e944a83e9ea41cc7bc0
@@ -67,5 +69,5 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 2acb18e8ac4f47f4bbcd971e90435510
   m_FloatValues:
-    214302c333521ef41a573e3ecc91de5e: -17.6
+    214302c333521ef41a573e3ecc91de5e: 0.08538538
   m_TransitionOverrides: {}

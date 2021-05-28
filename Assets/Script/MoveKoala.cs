@@ -12,7 +12,7 @@ public class MoveKoala : MonoBehaviour
     public float horizontalMove;
     public float verticalMove;
 
-    private float speed = 2.5f; //se ha hardcodeado, ya que unity lo pone por defecto en 0, y asi nos evitamos el error de speed = 0
+    private float speed = 3.5f; //se ha hardcodeado, ya que unity lo pone por defecto en 0, y asi nos evitamos el error de speed = 0
     public float gravitity = -9.81f;
 
     public float turnSmootTime = 0.1f;

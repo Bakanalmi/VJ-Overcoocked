@@ -8,6 +8,9 @@ public class CookItem : MonoBehaviour
     public GameObject[] OtherMeshMaterials;
 
     public string[] States;
+    //State 0: Ingredient cru
+    //Sate 1: Ingredient tallat
+    //State 2: Ingredient cuinat (opcional, depenent de l'ingredient)
 
     private int State;
     private int maxMaterials;

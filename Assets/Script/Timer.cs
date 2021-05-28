@@ -1,6 +1,8 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
+using UnityEngine.Experimental.GlobalIllumination;
 
 using TMPro;
 public class Timer : MonoBehaviour
@@ -15,6 +17,10 @@ public class Timer : MonoBehaviour
 
     //public Image Roscon_Timer;
 
+    public AudioMixer audiomixer;
+
+    //public Light myLight;
+
     
     public TextMeshProUGUI timerText; //Here we will save a reference of the text element of the Canvas.
 
@@ -22,10 +28,13 @@ public class Timer : MonoBehaviour
     public void Start()
     {
 
-        m = minutes;
-        s = seconds;
+        //m = minutes;
+        //s = seconds;
+        m = 1;
+        s = 10;
         writeOnTimer(m, s);
         Invoke("updateTimer", 1f);
+        //myLight = GetComponent<Light>();
     }
 
     public void stopTimer()
@@ -33,6 +42,11 @@ public class Timer : MonoBehaviour
         m = 0;
         s = 0;
         writeOnTimer(m, s);
+        Time.timeScale = 0;
+        AudioListener.pause = true;
+        FindObjectOfType<GameManager>().GameHasFinish = true;
+        FindObjectOfType<GameManager>().EndGame();
+        
 
     }
 
@@ -42,19 +56,29 @@ public class Timer : MonoBehaviour
         s--;
         if (s < 0)
         {
+            
             if (m == 0)
             {
                 //TODO: finalizar el juego
               //  Roscon_Timer.enabled = false;
                 Invoke("stopTimer", 0f) ;
-                FindObjectOfType<GameManager>().GameHasFinish = true;
-                FindObjectOfType<GameManager>().EndGame();
+                
             }
             else
             {
                 --m;
                 s = 59;
+               /* if (s <= 30) //en los ultimos 30s
+                {
+                    Invoke("FlashLight", 1f);
+
+                }*/
+              
             }
+        }
+        else if (s <= 59 && m == 0) //en los últimos 30s, aumentamos la velocidad de la música
+        {
+            SpeedUpPithc();
         }
         float Time_rest = m * 60 + s;
        // Roscon_Timer.fillAmount -= 1.0f/Time_rest * Time.deltaTime;
@@ -76,7 +100,19 @@ public class Timer : MonoBehaviour
         }
 
     }
-    
+
+    public void SpeedUpPithc()
+    {
+        float pitch;
+        audiomixer.GetFloat("Pitch", out pitch);   
+        audiomixer.SetFloat("Pitch", pitch + 0.0085f);
+    }
+
+
+    /*public void FlashLight()
+    {
+        myLight.enabled = !myLight.enabled;
+    }*/
 
 
 

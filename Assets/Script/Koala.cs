@@ -1,4 +1,6 @@
 
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class Koala : MonoBehaviour
@@ -14,6 +16,7 @@ public class Koala : MonoBehaviour
 
 
     public GameObject SonidoCortar;
+    public ProgressBar progressBar;
 
     private float speed = 3.5f; //se ha hardcodeado, ya que unity lo pone por defecto en 0, y asi nos evitamos el error de speed = 0
     public float gravitity = -9.81f;
@@ -34,7 +37,7 @@ public class Koala : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        State = 0;
     }
 
     // Update is called once per frame
@@ -65,7 +68,7 @@ public class Koala : MonoBehaviour
         velocity.y += gravitity * Time.deltaTime;
         KoalaController.Move(velocity * Time.deltaTime);
         StateAnalyse(); //Analizamos el estado donde nos encontramos
-
+     
 
         //Swithc case de los movimientos en el planol
         //if (Input.GetKey(KeyCode.LeftArrow)) gameObject.transform.Translate(horizontalMove * speed * Time.deltaTime, 0.0f, 0.0f);
@@ -97,6 +100,7 @@ public class Koala : MonoBehaviour
         if (State == 0)
         {
             //no debemos hacer nada, el Koala debe continuar con su actividad
+            speed = 3.5f;
         }
 
         if (State == 1) //Koala Ocupado
@@ -104,20 +108,11 @@ public class Koala : MonoBehaviour
 
             State = 0;
             Instantiate(SonidoCortar); //ejecutamos el EFECTO CORTAR alimentos
-            float Timer = 0f;
-            float FrozenTime = 8.0f;
-            while (Timer < FrozenTime)
-            {
-                Timer += Time.deltaTime;
-            }
-            
+
+            progressBar.SetProgressBar(5);
 
 
-
-
-            //Aparición de la barra de tiempo
-
-
+           //Aparición de la barra de tiempo
 
 
 
@@ -125,7 +120,6 @@ public class Koala : MonoBehaviour
         }
 
     }
-
 
     public void SetState(int state)
     {

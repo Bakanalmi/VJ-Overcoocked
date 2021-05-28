@@ -9,12 +9,16 @@ public class SimpleGrabSystem : MonoBehaviour
     [SerializeField]
     private Transform character;
 
+
+
     // Reference to the slot for holding picked item.
     [SerializeField]
     private Transform slot;
 
     // Reference to the currently held item.
     public PickableItem pickedItem;
+
+    public Koala KoalaController;
 
     public Collider hit = null;
 
@@ -184,7 +188,15 @@ public class SimpleGrabSystem : MonoBehaviour
             if (cookItem != null)
             {
                 if (cookItem.GetState() == "Raw" && cutAvailable)
+                {
+                    KoalaController.SetState(1); //Koala se debe encontrar ocupado
+                    Debug.Log("Entro en alimento a punto de ser cortado");
                     cookItem.Cut();
+                    
+                    
+                    
+                }
+
                 else if (cookItem.GetState() == "Cut" && cookAvailable)
                     cookItem.Cook();
             }

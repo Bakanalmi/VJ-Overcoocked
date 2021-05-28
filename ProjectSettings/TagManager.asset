@@ -18,6 +18,7 @@ TagManager:
   - Cooker
   - Undefined
   - Vegetable
+  - EfectoSonoro
   layers:
   - Default
   - TransparentFX

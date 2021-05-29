@@ -1,10 +1,9 @@
 
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Audio;
-using UnityEngine.Experimental.GlobalIllumination;
-
+using System;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
 
@@ -18,6 +17,9 @@ public class Timer : MonoBehaviour
     //public Image Roscon_Timer;
 
     public AudioMixer audiomixer;
+    public Button buttonBackGround;
+    public Color colorFlash;
+    private bool buttonFlash;
 
     //public Light myLight;
 
@@ -35,6 +37,10 @@ public class Timer : MonoBehaviour
         writeOnTimer(m, s);
         Invoke("updateTimer", 1f);
         //myLight = GetComponent<Light>();
+        buttonFlash = false;
+
+      
+
     }
 
     public void stopTimer()
@@ -68,22 +74,42 @@ public class Timer : MonoBehaviour
             {
                 --m;
                 s = 59;
-               /* if (s <= 30) //en los ultimos 30s
-                {
-                    Invoke("FlashLight", 1f);
-
-                }*/
+                
               
             }
         }
         else if (s <= 59 && m == 0) //en los últimos 30s, aumentamos la velocidad de la música
         {
             SpeedUpPithc();
+            if (s <= 10) //en los ultimos 30s
+            {
+                changeColorButton();
+                buttonFlash = !buttonFlash;
+                
+                
+
+            }
         }
         float Time_rest = m * 60 + s;
        // Roscon_Timer.fillAmount -= 1.0f/Time_rest * Time.deltaTime;
         writeOnTimer(m, s);
         Invoke("updateTimer", 1f);
+
+    }
+
+    private void changeColorButton()
+    {
+        
+        if (buttonFlash)
+        {
+            buttonBackGround.image.color = Color.yellow;
+        }
+        else
+        {
+            buttonBackGround.image.color = Color.white;
+
+        }
+
 
     }
 
@@ -107,12 +133,6 @@ public class Timer : MonoBehaviour
         audiomixer.GetFloat("Pitch", out pitch);   
         audiomixer.SetFloat("Pitch", pitch + 0.0085f);
     }
-
-
-    /*public void FlashLight()
-    {
-        myLight.enabled = !myLight.enabled;
-    }*/
 
 
 

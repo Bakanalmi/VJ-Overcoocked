@@ -16,7 +16,7 @@ public class Koala : MonoBehaviour
 
 
     public GameObject SonidoCortar;
-    public ProgressBar progressBar;
+    public GameObject progressBar;
 
     private float speed = 3.5f; //se ha hardcodeado, ya que unity lo pone por defecto en 0, y asi nos evitamos el error de speed = 0
     public float gravitity = -9.81f;
@@ -108,10 +108,7 @@ public class Koala : MonoBehaviour
 
             State = 0;
             Instantiate(SonidoCortar); //ejecutamos el EFECTO CORTAR alimentos
-
-            progressBar.SetProgressBar(5);
-
-
+            Instantiate(progressBar);
            //Aparición de la barra de tiempo
 
 

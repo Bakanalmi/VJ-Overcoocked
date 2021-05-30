@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 6359899468010168784}
   - component: {fileID: 5001820688525480034}
   - component: {fileID: -7692400042821284013}
-  - component: {fileID: -940617018053257095}
+  - component: {fileID: 7076977018651074749}
   m_Layer: 0
   m_Name: CounterTop_Isolated
   m_TagString: Untagged
@@ -144,8 +144,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!64 &-940617018053257095
-MeshCollider:
+--- !u!65 &7076977018651074749
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -154,7 +154,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1184381045598148484, guid: 22893a0ee2d5d614b8fe428c71087496, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 0.5, z: 1.300826}
+  m_Center: {x: 0, y: 0.25, z: 0}

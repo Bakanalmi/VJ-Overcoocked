@@ -6,6 +6,11 @@ public class CookItem : MonoBehaviour
 {
     public GameObject MyMainGameObject;
     public GameObject[] OtherMeshMaterials;
+    public GameObject SonidoCortar;
+
+    private CookingBarra cookingBarra;
+
+    private Koala koala;
 
     public string[] States;
     //State 0: Ingredient cru
@@ -20,12 +25,29 @@ public class CookItem : MonoBehaviour
     {
         maxMaterials = OtherMeshMaterials.Length - 1;
         State = 0;
+        koala = GameObject.FindGameObjectWithTag("Player").GetComponent<Koala>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (cookingBarra != null)
+        {
+            if (cookingBarra.maxTime > cookingBarra.currentTime)
+            {
+                Debug.Log(cookingBarra.currentTime);
+                cookingBarra.currentTime += Time.deltaTime;
+            }
+            else
+            {
+                cookingBarra.ChangeVisibilityCanvas();
+                cookingBarra.currentTime = 0f;
+                cookingBarra = null;
+                State++;
+                UpdateMesh();
+                koala.SetState(0);
+            }
+        }
     }
 
     public string GetState()
@@ -35,8 +57,11 @@ public class CookItem : MonoBehaviour
 
     public void Cut()
     {
-        State++;
-        UpdateMesh();
+        Debug.Log("empiezo a cortar");
+        koala.SetState(1);
+        cookingBarra = transform.GetComponentInParent<CookingBarra>();
+        cookingBarra.ChangeVisibilityCanvas();
+        Instantiate(SonidoCortar);
     }
 
     public void Cook()

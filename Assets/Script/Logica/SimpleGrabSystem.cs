@@ -9,8 +9,6 @@ public class SimpleGrabSystem : MonoBehaviour
     [SerializeField]
     private Transform character;
 
-
-
     // Reference to the slot for holding picked item.
     [SerializeField]
     private Transform slot;
@@ -33,7 +31,7 @@ public class SimpleGrabSystem : MonoBehaviour
     private void Update()
     {
         // Execute logic only on button pressed
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && KoalaController.GetState() == 0)
         {
             // Check if player picked some item already
             if (pickedItem)
@@ -161,7 +159,7 @@ public class SimpleGrabSystem : MonoBehaviour
 
         else if (other.gameObject.CompareTag("cuttingTable"))
         {
-            if (other.transform.childCount == 0) 
+            if (other.transform.childCount == 1) 
             {
                 placeItem = true;
                 hit = other;
@@ -182,7 +180,7 @@ public class SimpleGrabSystem : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) && KoalaController.GetState() == 0)
         {
             var cookItem = other.transform.GetComponent<CookItem>();
             if (cookItem != null)
@@ -192,9 +190,6 @@ public class SimpleGrabSystem : MonoBehaviour
                     KoalaController.SetState(1); //Koala se debe encontrar ocupado
                     Debug.Log("Entro en alimento a punto de ser cortado");
                     cookItem.Cut();
-                    
-                    
-                    
                 }
 
                 else if (cookItem.GetState() == "Cut" && cookAvailable)

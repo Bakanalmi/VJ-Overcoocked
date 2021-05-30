@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3371267280078456527}
   - component: {fileID: -138517639318531413}
   - component: {fileID: 5183514162493119494}
+  - component: {fileID: -5593813160986355825}
   m_Layer: 0
   m_Name: Tomato_Whole
   m_TagString: Vegetable
@@ -125,3 +126,23 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.4065523
   m_Center: {x: 0, y: 0.3782617, z: 0.05502197}
+--- !u!114 &-5593813160986355825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239797487691303830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f04c5fb2131a214799f50a622c5c50c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyMainGameObject: {fileID: 239797487691303830}
+  OtherMeshMaterials:
+  - {fileID: 239797487691303830}
+  - {fileID: 4774908929787989587, guid: 8d70e3a87b8af4847bbf8365775f64e7, type: 3}
+  SonidoCortar: {fileID: 5159774287567823549, guid: dcc8ad3cac5cf9349aecffadf7a66ead, type: 3}
+  States:
+  - Raw
+  - Cut

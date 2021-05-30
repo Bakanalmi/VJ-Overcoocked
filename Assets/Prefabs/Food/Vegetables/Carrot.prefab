@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ab23008c645d946a282e0e21ad7c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodName: Carrot
 --- !u!114 &2566149606001982275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +145,7 @@ MonoBehaviour:
   - {fileID: 8508609921799454503}
   - {fileID: 5307334905140972816, guid: e140a5b53ebbcd843b7a2e9f64e162c2, type: 3}
   - {fileID: 2327097154514421854, guid: 772ed23ba93138f4f89db53e60924111, type: 3}
+  SonidoCortar: {fileID: 0}
   States:
   - Raw
   - Cut

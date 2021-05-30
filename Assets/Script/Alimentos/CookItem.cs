@@ -14,7 +14,7 @@ public class CookItem : MonoBehaviour
 
     public string[] States;
     //State 0: Ingredient cru
-    //Sate 1: Ingredient tallat
+    //State 1: Ingredient tallat
     //State 2: Ingredient cuinat (opcional, depenent de l'ingredient)
 
     private int State;
@@ -35,7 +35,6 @@ public class CookItem : MonoBehaviour
         {
             if (cookingBarra.maxTime > cookingBarra.currentTime)
             {
-                Debug.Log(cookingBarra.currentTime);
                 cookingBarra.currentTime += Time.deltaTime;
             }
             else

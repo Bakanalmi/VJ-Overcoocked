@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ab23008c645d946a282e0e21ad7c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodName: Tomatoe
 --- !u!135 &5183514162493119494
 SphereCollider:
   m_ObjectHideFlags: 0

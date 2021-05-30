@@ -19,6 +19,8 @@ TagManager:
   - Undefined
   - Vegetable
   - EfectoSonoro
+  - Dish
+  - FoodSlot
   layers:
   - Default
   - TransparentFX

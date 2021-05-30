@@ -19,11 +19,13 @@ public class SimpleGrabSystem : MonoBehaviour
     public Koala KoalaController;
 
     public Collider hit = null;
+    public Collider dishSlot = null;
 
     private bool FoodAvailable = false;
     private bool placeItem = false;
     private bool cutAvailable;
     private bool cookAvailable;
+    private bool dish;
 
     /// <summary>
     /// Method called very frame.
@@ -93,6 +95,11 @@ public class SimpleGrabSystem : MonoBehaviour
         {
             PlaceItem(item);
         }
+
+        else if (dish)
+        {
+            PlaceItemDish(item);
+        }
         
         else
         {
@@ -126,6 +133,21 @@ public class SimpleGrabSystem : MonoBehaviour
         item.transform.localRotation = Quaternion.identity;
     }
 
+    private void PlaceItemDish(PickableItem item)
+    {
+        // Disable rigidbody and reset velocities
+        item.Rb.isKinematic = true;
+        item.Rb.velocity = Vector3.zero;
+        item.Rb.angularVelocity = Vector3.zero;
+
+        // Set Slot as a parent
+        item.transform.SetParent(dishSlot.transform);
+
+        // Reset position and rotation
+        item.transform.localPosition = Vector3.zero;
+        item.transform.localRotation = Quaternion.identity;
+    }
+
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("VegetableC") || other.gameObject.CompareTag("Vegetable"))
@@ -139,12 +161,24 @@ public class SimpleGrabSystem : MonoBehaviour
             cutAvailable = false;
         }
 
+        else if (other.gameObject.CompareTag("Table"))
+        {
+            placeItem = false;
+        }
+
+        else if (other.gameObject.CompareTag("Dish"))
+        {
+            FoodAvailable = false;
+        }
+
+        else if (other.gameObject.CompareTag("FoodSlot"))
+        {
+            dish = false;
+        }
+
         else if (other.gameObject.CompareTag("Paella") || other.gameObject.CompareTag("Olla"))
         {
-            if (other.transform.childCount == 0)
-            {
-                placeItem = false;
-            }
+            placeItem = false;
             cookAvailable = false;
         }
     }
@@ -153,18 +187,48 @@ public class SimpleGrabSystem : MonoBehaviour
     {
         if (other.gameObject.CompareTag("VegetableC") || other.gameObject.CompareTag("Vegetable"))
         {
-            FoodAvailable = true;
-            hit = other;
+            if (!other.transform.parent.CompareTag("FoodSlot"))
+            {
+                FoodAvailable = true;
+                hit = other;
+            }
         }
 
         else if (other.gameObject.CompareTag("cuttingTable"))
         {
-            if (other.transform.childCount == 1) 
+            if (other.transform.childCount == 1)
             {
                 placeItem = true;
                 hit = other;
             }
             cutAvailable = true;
+        }
+
+        else if (other.gameObject.CompareTag("Table"))
+        {
+            if (other.transform.childCount == 0)
+            {
+                placeItem = true;
+                hit = other;
+            }
+        }
+
+        else if (other.gameObject.CompareTag("Dish"))
+        {
+            if (other.transform.childCount == 5)
+            {
+                FoodAvailable = true;
+                hit = other;
+            }
+        }
+
+        else if (other.gameObject.CompareTag("FoodSlot") && pickedItem != null)
+        {
+            if (other.transform.childCount == 0 && pickedItem.foodName != "Dish")
+            {
+                dish = true;
+                dishSlot = other;
+            }
         }
 
         else if (other.gameObject.CompareTag("Paella") || other.gameObject.CompareTag("Olla"))

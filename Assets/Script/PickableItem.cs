@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PickableItem : MonoBehaviour
 {
+    public string foodName;
     // Reference to the rigidbody
     private Rigidbody rb;
     public Rigidbody Rb => rb;
@@ -17,5 +18,10 @@ public class PickableItem : MonoBehaviour
     {
         // Get reference to the rigidbody
         rb = GetComponent<Rigidbody>();
+    }
+
+    public void Change()
+    {
+        rb = null;
     }
 }

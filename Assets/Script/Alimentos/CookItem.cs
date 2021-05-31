@@ -18,13 +18,13 @@ public class CookItem : MonoBehaviour
     //State 2: Ingredient cuinat (opcional, depenent de l'ingredient)
 
     private int State;
-    private int maxMaterials;
+    public bool cooking;
 
     // Start is called before the first frame update
     void Start()
     {
-        maxMaterials = OtherMeshMaterials.Length - 1;
         State = 0;
+        cooking = false;
         koala = GameObject.FindGameObjectWithTag("Player").GetComponent<Koala>();
     }
 
@@ -42,9 +42,13 @@ public class CookItem : MonoBehaviour
                 cookingBarra.ChangeVisibilityCanvas();
                 cookingBarra.currentTime = 0f;
                 cookingBarra = null;
-                State++;
-                UpdateMesh();
-                koala.SetState(0);
+                if (!cooking)
+                {
+                    State++;
+                    UpdateMesh();
+                    koala.SetState(0);
+                }
+                cooking = false;
             }
         }
     }
@@ -56,7 +60,6 @@ public class CookItem : MonoBehaviour
 
     public void Cut()
     {
-        Debug.Log("empiezo a cortar");
         koala.SetState(1);
         cookingBarra = transform.GetComponentInParent<CookingBarra>();
         cookingBarra.ChangeVisibilityCanvas();
@@ -65,8 +68,11 @@ public class CookItem : MonoBehaviour
 
     public void Cook()
     {
+        cookingBarra = transform.GetComponentInParent<CookingBarra>();
+        cookingBarra.ChangeVisibilityCanvas();
         State++;
         UpdateMesh();
+        cooking = true;
     }
 
     private void UpdateMesh()

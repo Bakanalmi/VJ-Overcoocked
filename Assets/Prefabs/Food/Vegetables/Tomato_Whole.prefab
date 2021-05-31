@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -5593813160986355825}
   m_Layer: 0
   m_Name: Tomato_Whole
-  m_TagString: Vegetable
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,7 +143,9 @@ MonoBehaviour:
   OtherMeshMaterials:
   - {fileID: 239797487691303830}
   - {fileID: 4774908929787989587, guid: 8d70e3a87b8af4847bbf8365775f64e7, type: 3}
+  - {fileID: 7781925664185873353, guid: 5061427a6b1152345b15b735d3a1692e, type: 3}
   SonidoCortar: {fileID: 5159774287567823549, guid: dcc8ad3cac5cf9349aecffadf7a66ead, type: 3}
   States:
   - Raw
   - Cut
+  - Cooked

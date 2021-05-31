@@ -59,7 +59,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.14, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1117562012358786529
 GameObject:
@@ -120,7 +120,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.14, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2914919724511336209
 GameObject:
@@ -181,7 +181,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.14, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3792481153231188318
 GameObject:
@@ -196,8 +196,8 @@ GameObject:
   - component: {fileID: 4004095655109311738}
   - component: {fileID: 6437531635119255014}
   - component: {fileID: -3742249893951368416}
-  - component: {fileID: 775270830403271919}
   - component: {fileID: 2470269618143005814}
+  - component: {fileID: -5343578199633869515}
   m_Layer: 0
   m_Name: Plate
   m_TagString: Dish
@@ -302,20 +302,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodName: Dish
---- !u!64 &775270830403271919
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3792481153231188318}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4187243139167119744, guid: 2024b4c7cc3d88b4ea8ebdfa372a3e4e, type: 3}
 --- !u!114 &2470269618143005814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c17d02d619c46934eb3787213b48d873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lettuce_salad: {fileID: 8938904593759154559, guid: 67ffc6309cc20254398fb96564fb61e3, type: 3}
+  tomatoe_salad: {fileID: 4774908929787989587, guid: 8d70e3a87b8af4847bbf8365775f64e7, type: 3}
   slots:
   - {fileID: 1117562012358786529}
   - {fileID: 4774168917227251256}
@@ -340,6 +328,19 @@ MonoBehaviour:
   - 
   - 
   - 
+--- !u!65 &-5343578199633869515
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3792481153231188318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.14, z: 1}
+  m_Center: {x: 0, y: 0.065, z: 0}
 --- !u!1 &4774168917227251256
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +400,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.14, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6850049059237625592
 GameObject:
@@ -460,5 +461,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.14, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

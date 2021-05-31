@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 1054083481160658278}
   - component: {fileID: 2022897923183205752}
   - component: {fileID: -6145078409176585260}
+  - component: {fileID: -5591674143781756552}
   m_Layer: 0
   m_Name: Onion
-  m_TagString: VegetableC
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,3 +127,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.37783858
   m_Center: {x: -0.00007250905, y: 0.3845226, z: 0}
+--- !u!114 &-5591674143781756552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481379390888495749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f04c5fb2131a214799f50a622c5c50c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyMainGameObject: {fileID: 481379390888495749}
+  OtherMeshMaterials:
+  - {fileID: 481379390888495749}
+  - {fileID: 6751321292549473601, guid: 8c5fa86fe06504a4cb0bc2319b083564, type: 3}
+  - {fileID: 5047599744637667244, guid: baf3fcf91bddeaa47abadce05ce9543c, type: 3}
+  SonidoCortar: {fileID: 5159774287567823549, guid: dcc8ad3cac5cf9349aecffadf7a66ead, type: 3}
+  States:
+  - Raw
+  - Cut
+  - Cooked

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 836434266107944294}
   - component: {fileID: 171890244679006700}
   - component: {fileID: 27524907698431683}
+  - component: {fileID: 6222616662412517630}
   m_Layer: 0
   m_Name: Lettuce_Whole
-  m_TagString: VegetableC
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,3 +128,23 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2723565842730700196, guid: 57ce30e047ab34b478ad23dd5d2d9aef, type: 3}
+--- !u!114 &6222616662412517630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6617549650841003870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f04c5fb2131a214799f50a622c5c50c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyMainGameObject: {fileID: 6617549650841003870}
+  OtherMeshMaterials:
+  - {fileID: 6617549650841003870}
+  - {fileID: 8938904593759154559, guid: 67ffc6309cc20254398fb96564fb61e3, type: 3}
+  SonidoCortar: {fileID: 5159774287567823549, guid: dcc8ad3cac5cf9349aecffadf7a66ead, type: 3}
+  States:
+  - Raw
+  - Cut

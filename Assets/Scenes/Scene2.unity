@@ -265,7 +265,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 537135928}
-  m_RootOrder: 51
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &23469965
 BoxCollider:
@@ -973,6 +973,7 @@ Transform:
   - {fileID: 500641059}
   - {fileID: 1461242235}
   - {fileID: 79590641}
+  - {fileID: 23469964}
   - {fileID: 1219384069}
   - {fileID: 839571213}
   - {fileID: 1946139351}
@@ -983,7 +984,6 @@ Transform:
   - {fileID: 434410340}
   - {fileID: 903039306}
   - {fileID: 562816218}
-  - {fileID: 23469964}
   - {fileID: 814466326}
   - {fileID: 1549905982}
   - {fileID: 1781395936}
@@ -4201,6 +4201,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 537135928}
     m_Modifications:
+    - target: {fileID: 4659781510330696948, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659781510330696948, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: m_Size.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659781510330696948, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: m_Center.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659781510330696948, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: m_Center.z
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4659781510330696949, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
       propertyPath: KoalaController
       value: 
@@ -4213,6 +4229,14 @@ PrefabInstance:
       propertyPath: KoalaController
       value: 
       objectReference: {fileID: 561290412}
+    - target: {fileID: 4659781510330696951, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659781510330696951, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: m_StepOffset
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 4659781510330696953, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
       propertyPath: m_Name
       value: Koala
@@ -4264,6 +4288,14 @@ PrefabInstance:
     - target: {fileID: 5467667042536627779, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059232945762911715, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059232945762911715, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11f020aeba173c643ab48943a7e82412, type: 3}
@@ -4832,7 +4864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7865081754025648035, guid: 051fd5af1d405b6489a6200b7f6289a7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7865081754025648035, guid: 051fd5af1d405b6489a6200b7f6289a7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4840,7 +4872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7865081754025648035, guid: 051fd5af1d405b6489a6200b7f6289a7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7865081754025648035, guid: 051fd5af1d405b6489a6200b7f6289a7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -4852,7 +4884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7865081754025648035, guid: 051fd5af1d405b6489a6200b7f6289a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 7865081754025648035, guid: 051fd5af1d405b6489a6200b7f6289a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

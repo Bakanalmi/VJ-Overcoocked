@@ -13,7 +13,7 @@ public class CrateAction : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
-            OpenLid(close);
+            CloseLid(close);
     }
 
     void OnTriggerEnter(Collider other)

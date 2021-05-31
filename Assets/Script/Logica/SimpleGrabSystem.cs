@@ -13,6 +13,9 @@ public class SimpleGrabSystem : MonoBehaviour
     [SerializeField]
     private Transform slot;
 
+    [SerializeField]
+    private Transform slotSoup;
+
     // Reference to the currently held item.
     public PickableItem pickedItem;
 
@@ -24,7 +27,6 @@ public class SimpleGrabSystem : MonoBehaviour
     private bool FoodAvailable = false;
     private bool placeItem = false;
     private bool cutAvailable;
-    private bool cookAvailable;
     private bool dish;
 
     /// <summary>
@@ -112,6 +114,8 @@ public class SimpleGrabSystem : MonoBehaviour
             // Add force to throw item a little bit
             item.Rb.AddForce(slot.transform.forward * 200);
         }
+        hit = null;
+        dishSlot = null;
     }
 
     /// <summary>
@@ -131,6 +135,16 @@ public class SimpleGrabSystem : MonoBehaviour
         // Reset position and rotation
         item.transform.localPosition = Vector3.zero;
         item.transform.localRotation = Quaternion.identity;
+
+        if (hit.transform.CompareTag("Olla"))
+        {
+            var cookItem = item.transform.GetComponent<CookItem>();
+            if (cookItem != null)
+            {
+                if (cookItem.GetState() == "Cut")
+                cookItem.Cook();
+            }
+        }
     }
 
     private void PlaceItemDish(PickableItem item)
@@ -150,7 +164,7 @@ public class SimpleGrabSystem : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("VegetableC") || other.gameObject.CompareTag("Vegetable"))
+        if (other.gameObject.CompareTag("Food"))
         {
             FoodAvailable = false;
         }
@@ -179,18 +193,34 @@ public class SimpleGrabSystem : MonoBehaviour
         else if (other.gameObject.CompareTag("Paella") || other.gameObject.CompareTag("Olla"))
         {
             placeItem = false;
-            cookAvailable = false;
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("VegetableC") || other.gameObject.CompareTag("Vegetable"))
+        if (other.gameObject.CompareTag("Food"))
         {
-            if (!other.transform.parent.CompareTag("FoodSlot"))
+            if (other.transform.parent == null || !other.transform.parent.CompareTag("FoodSlot"))
             {
                 FoodAvailable = true;
                 hit = other;
+            }
+            if (!other.transform.GetComponent<CookItem>().cooking && slot.childCount == 1 && other.transform.parent.CompareTag("Olla") && 
+                slot.GetChild(0).GetChild(2).childCount == 0 && slot.GetChild(0).CompareTag("Dish"))
+            {
+                var item = other.transform.GetComponent<PickableItem>();
+
+                // Disable rigidbody and reset velocities
+                item.Rb.isKinematic = true;
+                item.Rb.velocity = Vector3.zero;
+                item.Rb.angularVelocity = Vector3.zero;
+
+                // Set Slot as a parent
+                item.transform.SetParent(slot.GetChild(0).GetChild(2));
+
+                // Reset position and rotation
+                item.transform.localPosition = Vector3.zero;
+                item.transform.localRotation = Quaternion.identity;
             }
         }
 
@@ -233,12 +263,11 @@ public class SimpleGrabSystem : MonoBehaviour
 
         else if (other.gameObject.CompareTag("Paella") || other.gameObject.CompareTag("Olla"))
         {
-            if (other.transform.childCount == 0)
+            if (other.transform.childCount == 1)
             {
                 placeItem = true;
                 hit = other;
             }
-            cookAvailable = true;
         }
     }
 
@@ -252,12 +281,9 @@ public class SimpleGrabSystem : MonoBehaviour
                 if (cookItem.GetState() == "Raw" && cutAvailable)
                 {
                     KoalaController.SetState(1); //Koala se debe encontrar ocupado
-                    Debug.Log("Entro en alimento a punto de ser cortado");
+                    //Debug.Log("Entro en alimento a punto de ser cortado");
                     cookItem.Cut();
                 }
-
-                else if (cookItem.GetState() == "Cut" && cookAvailable)
-                    cookItem.Cook();
             }
         }   
     }

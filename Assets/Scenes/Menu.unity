@@ -175,7 +175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &395154843
 RectTransform:
   m_ObjectHideFlags: 0
@@ -212,6 +212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc66b3330e98ae84f98335e65e5f6625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayButton: {fileID: 1770623199}
+  Scenen1: {fileID: 618544759}
+  Scenen2: {fileID: 731215022}
 --- !u!1 &543381327
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,8 +247,8 @@ RectTransform:
   m_Father: {fileID: 1501842345}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -453,7 +456,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1635,6 +1638,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc66b3330e98ae84f98335e65e5f6625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayButton: {fileID: 1770623199}
+  Scenen1: {fileID: 618544759}
+  Scenen2: {fileID: 731215022}
 --- !u!1 &1260617375
 GameObject:
   m_ObjectHideFlags: 0
